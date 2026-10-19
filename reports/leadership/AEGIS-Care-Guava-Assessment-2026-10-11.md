@@ -4,6 +4,8 @@
 **Date:** 11th October 2026
 **Distribution:** Private technical review; synthetic data only.
 
+> October 18 follow-up: [verified OS, actual SDK installation procedure, agent changes and retests](AEGIS-Care-Improvement-Review-2026-10-18.md). The October 11 results and PDF below remain the historical baseline.
+
 ## Executive assessment
 
 Guava provides useful native task, field, callback, text-test, audio-test and roleplay capabilities. The evaluation also found release-integrity gaps, SDK boundary behaviors and repeatable synthetic safety/authorization/routing failures. HarborCare is suitable for controlled synthetic evaluation; the available evidence does not support readiness for real patient records or real payment processing.

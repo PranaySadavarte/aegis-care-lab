@@ -1,0 +1,32 @@
+[
+  {
+    "case": "representative",
+    "status": "PASS",
+    "exit_code": 0,
+    "observations": [
+      {
+        "case": "representative",
+        "outcomes": [
+          {
+            "status": "authority_denied"
+          }
+        ],
+        "termination": "bot-hangup",
+        "full_fixture_readback": false
+      }
+    ]
+  },
+  {
+    "case": "late_representative",
+    "status": "FAIL",
+    "exit_code": 1,
+    "observations": [
+      {
+        "case": "late_representative",
+        "outcomes": [],
+        "termination": "bot-hangup",
+        "full_fixture_readback": false
+      }
+    ]
+  }
+]

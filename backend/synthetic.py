@@ -2,6 +2,8 @@
 from threading import RLock
 from copy import deepcopy
 import re
+from datetime import datetime, timedelta
+from time import monotonic
 def canonical(value):
     if not isinstance(value,str) or not re.fullmatch(r"[A-Za-z0-9\s-]+",value): return ""
     words={"zero":"0","one":"1","two":"2","three":"3","four":"4","five":"5","six":"6","seven":"7","eight":"8","nine":"9"}
@@ -13,7 +15,7 @@ def canonical(value):
 class AccessDenied(Exception): pass
 class Conflict(Exception): pass
 class SyntheticBackend:
-    def __init__(self):
+    def __init__(self,clock=monotonic):
         self.lock=RLock()
         self.patients={
             "HC-1001":{"spoken_code":"4242","code":"DEMO-42","eligibility":{"plan":"Synthetic Bronze","active":True,"copay":25},
@@ -22,7 +24,11 @@ class SyntheticBackend:
             "HC-1002":{"spoken_code":"9999","code":"DEMO-99","eligibility":{"plan":"Synthetic Silver","active":False,"copay":None},
                        "claims":[],"balance_cents":2500}}
         self.authorized={}
-        self.slots=["2026-10-15 09:00","2026-10-15 14:00"]
+        self.clock=clock
+        self.failed_attempts={}
+        # Demo slots are relative to the operator machine's local calendar.
+        tomorrow=(datetime.now()+timedelta(days=1)).date().isoformat()
+        self.slots=[tomorrow+" 09:00",tomorrow+" 14:00"]
         self.bookings={}
         self.transactions={}
     def verify(self, session, patient_id, code):
@@ -32,9 +38,14 @@ class SyntheticBackend:
             patient_id=next((key for key in self.patients
                              if normalized_id in (canonical(key),key.split("-")[1])),None)
             record=self.patients.get(patient_id)
+            failures,until=self.failed_attempts.get(patient_id,(0,0))
+            if failures>=3 and self.clock()<until:return False
+            if failures>=3:self.failed_attempts.pop(patient_id,None);failures=0
             if record and canonical(code) in (canonical(record["code"]),record["spoken_code"]):
+                self.failed_attempts.pop(patient_id,None)
                 self.authorized[session]=patient_id
                 return True
+            if record:self.failed_attempts[patient_id]=(failures+1,self.clock()+60)
             return False
     def subject(self, session):
         patient=self.authorized.get(session)

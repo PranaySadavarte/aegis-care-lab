@@ -12,3 +12,6 @@ baseline/sdk-0.47.0/installed-inventory.json
 # Reviewed sanitized evidence pages are versioned; raw execution evidence stays ignored.
 !reports/findings/evidence/
 !reports/findings/evidence/*.md
+
+# Ephemeral local voice session access link
+dashboard/agent-session.json

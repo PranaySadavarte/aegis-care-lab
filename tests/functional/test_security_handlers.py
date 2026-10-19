@@ -9,7 +9,7 @@ class SecurityHandlers(unittest.TestCase):
         self.results=[]
         with patch("guava.agent.Client"):self.agent,self.b=create_agent(outcomes=self.results)
     def verify(self,c,code="4242"):
-        c.set_field("patient_id","1001");c.set_field("verification_code",code)
+        c.set_field("caller_role","self");c.set_field("patient_id","1001");c.set_field("verification_code",code)
         self.agent._on_task_complete_handlers["verify"](c)
     def test_injection_field_cannot_authorize(self):
         c=MockCall();c.set_field("workflow","billing")

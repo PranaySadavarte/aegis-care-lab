@@ -180,3 +180,11 @@ At user request, removed the Prepared for Guava co-founders and CEO audience lin
 
 
 Saved an unsent Gmail reply draft in the existing QA Engineer at Guava thread, addressed only to Nico and Anthony. Verified DRAFT label, original thread, October11PDF attachment and33670bytes. Draft identifiers remain local ignored evidence. Added persona/roleplay explanation with actual scenario assertions, actor-validity issue, partial payment coverage and no isolated API-defect claim. Revised report pushed to private GitHub main; actual execution timestamps remain unchanged.
+
+
+## October 18, 2026: independent improvement lab
+Cloned original into isolated workspace; created private aegis-care-lab with original as upstream. Fresh Windows 10 Home 22H2 build19045.6466 AMD64, CPython3.12.14; pinned SDK0.47.0 and dashboard dependencies installed through setup-windows.ps1. Existing CLI0.47.0 queried directly; not reinstalled.
+Agent adds role gate, guarded action suggestions, competitive workflow routes, searchable future slots with helper-output membership checks, native amount validation, caller-speech revocation, cancellation, escalation fallback, reviewed SDK answers and optional designated synthetic-card collection. Account attempts bounded at three failures/60s; journal termination allowlist. New stale fixed-date slot issue found and fixed.
+Fresh offline: SDK47/53PASS six retained failures; application46/46PASS. Product audit3PASS/2FAIL: persistence and native transcript retention remain. Hosted appointment/card PASS. Representative initial early-hangup harness failure preserved; corrected denial PASS. Late representative transcript refuses and ends; harnessFAIL due no backend completion, kept separate from safe-refusal observation.
+Dashboard lab page, existing flowchart update, preserved original SVG, 81-public-member static SDK inventory, dated improvement report with OS/install method and missing-evidence review. Local dashboard and temporary WebRTC listener launched. No phone, outbound, SMS, paid deploy or real payment.
+Learning: denial may complete without backend workflow result. Do not equate source references, unit passes or one hosted smoke with full feature/voice coverage. Raw evidence and temporary voice access links remain ignored.

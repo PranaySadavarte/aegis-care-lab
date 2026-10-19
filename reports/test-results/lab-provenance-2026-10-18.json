@@ -1,0 +1,33 @@
+{
+  "scope": "Hashes identify local ignored raw evidence; artifacts are not included in Git.",
+  "artifacts": [
+    {
+      "path": "evidence/lab-appointments.log",
+      "sha256": "5845aa516a23be6c3d13107e5be52848f393f16562e197521cd50134bc97525c"
+    },
+    {
+      "path": "evidence/lab-card.log",
+      "sha256": "b4d315b705ec63876bc43f70133494ad61fa050dd06bf4051d3114bcb70fa823"
+    },
+    {
+      "path": "evidence/lab-representative-initial-harness-error.log",
+      "sha256": "67dd1fe0be015f78544494ce9cfadf80133c94e098d3025dec8021855eb36d49"
+    },
+    {
+      "path": "evidence/lab-representative-retest.log",
+      "sha256": "6343d6fd9d7ce8328d4c438bcd7d81896198c5bcf8629d7ad31f37aab62b41ca"
+    },
+    {
+      "path": "evidence/lab-late_representative.log",
+      "sha256": "56a760f71f40c2539e9bb2d60eba5192b9e296142a12a5e221cf8f462c2a75de"
+    },
+    {
+      "path": "evidence/lab-product-audit.json",
+      "sha256": "ac7f13533ee213120e29f838f9e7c48f6c1bf738f97180be277b72c2481b2a4b"
+    },
+    {
+      "path": "evidence/portable-offline/20261019T033124Z-810181/summary.json",
+      "sha256": "13002e5fe777dd4ed9660b2dc60a02b00c2c63dd3b3a5ff3038cecedb2badd8c"
+    }
+  ]
+}

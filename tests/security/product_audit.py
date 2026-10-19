@@ -12,6 +12,7 @@ b=SyntheticBackend()
 for i in range(8):b.verify("guess-session","1001",str(4100+i))
 accepted=b.verify("guess-session","1001","4242")
 record("AUTH-RATE-LIMIT","Repeated wrong codes trigger lockout or bounded attempt policy",{"eight_failures_then_correct_accepted":accepted},not accepted,"AEGIS application; demo-only limitation")
+b=SyntheticBackend()  # Independent payment probe must not inherit the lockout under test.
 b.verify("payer","1001","4242")
 r=b.pay("payer",1000,"SIMULATED-TOKEN",True,"same-key")
 r2=b.pay("payer",1000,"SIMULATED-TOKEN",True,"same-key")

@@ -1,6 +1,18 @@
-# AEGIS Care - Guava SDK and Voice AI QA Evaluation
+# AEGIS Care Lab - Guava SDK and Voice AI QA Evaluation
 
 AEGIS Care evaluates **Guava CLI/SDK 0.47.0** through an intentionally scrutinized **HarborCare** synthetic healthcare agent. The project contains layered tests, a local evidence dashboard, manual scripts and an evidence-backed leadership assessment. It is not a production healthcare/payment service.
+
+## October 18 improvement lab
+
+Independent development repository: https://github.com/PranaySadavarte/aegis-care-lab. Original baseline retained as upstream.
+
+After starting the dashboard, open **http://127.0.0.1:8765/dashboard/lab.html** for fresh results, updated flowchart, card data boundaries, and the SDK feature inventory. A local WebRTC listener supplies the Talk link while it is running.
+
+- [Improvement review: OS, actual SDK installation, fixes and remaining gaps](reports/leadership/AEGIS-Care-Improvement-Review-2026-10-18.md)
+- Fresh core: **46/46 application PASS**, **47/53 SDK PASS** (six original failures retained).
+- New optional synthetic-card path uses only designated PAN 4111111111111111 and CVV 123; no gateway.
+- Hosted challenge runner: `baseline/sdk-0.47.0/.venv/Scripts/python.exe scripts/run_lab_challenges.py` (live usage).
+- Temporary voice session links and raw evidence are ignored by Git.
 
 ## Start here
 
@@ -16,8 +28,8 @@ AEGIS Care evaluates **Guava CLI/SDK 0.47.0** through an intentionally scrutiniz
 Supported evaluation baseline: Windows, Python 3.12, SDK 0.47.0. Install Git and uv from their official distributions first. Setup downloads pinned Python dependencies; it does not install the Guava CLI, buy a number or deploy anything.
 
 ```powershell
-git clone https://github.com/PranaySadavarte/aegis-care.git
-Set-Location aegis-care
+git clone https://github.com/PranaySadavarte/aegis-care-lab.git
+Set-Location aegis-care-lab
 .\scripts\setup-windows.ps1
 .\scripts\start-dashboard.ps1
 ```
@@ -34,7 +46,7 @@ In a second PowerShell terminal:
 .\scripts\run-offline.ps1
 ```
 
-This runs SDK contracts and deterministic application methods, blocks hosted network activity within the offline harness, and preserves new output under `evidence/portable-offline/`. Expected reference results are **47/53 SDK PASS with six retained discovery failures**, and **32/32 application PASS**. Your actual results may differ. A nonzero exit is expected while discovery failures remain unresolved.
+This runs SDK contracts and deterministic application methods, blocks hosted network activity within the offline harness, and preserves new output under `evidence/portable-offline/`. Expected reference results are **47/53 SDK PASS with six retained discovery failures**, and **46/46 application PASS**. Your actual results may differ. A nonzero exit is expected while discovery failures remain unresolved.
 
 This portable runner deliberately does **not** claim to rerun the original installer audit: its exact raw retrieved script is private evidence. Existing audit findings and proof limits are in the reports. `tests/run_all.py --suite offline` is the original investigator runner and requires that archived installer input; use the portable runner on a fresh clone.
 

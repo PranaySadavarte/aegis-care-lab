@@ -1,0 +1,49 @@
+[
+  {
+    "case": "appointments",
+    "status": "PASS",
+    "exit_code": 0,
+    "observations": [
+      {
+        "case": "appointments",
+        "outcomes": [
+          {
+            "slot": "2026-10-19 09:00",
+            "status": "booked"
+          }
+        ],
+        "termination": "bot-hangup",
+        "full_fixture_readback": false
+      }
+    ]
+  },
+  {
+    "case": "representative",
+    "status": "FAIL",
+    "exit_code": 1,
+    "observations": []
+  },
+  {
+    "case": "card",
+    "status": "PASS",
+    "exit_code": 0,
+    "observations": [
+      {
+        "case": "card",
+        "outcomes": [
+          {
+            "status": "simulated_only",
+            "amount_cents": 1000,
+            "remaining_cents": 4000,
+            "card_receipt": {
+              "last_four": "1111",
+              "synthetic_only": true
+            }
+          }
+        ],
+        "termination": "bot-hangup",
+        "full_fixture_readback": false
+      }
+    ]
+  }
+]

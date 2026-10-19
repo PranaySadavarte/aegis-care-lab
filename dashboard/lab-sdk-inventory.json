@@ -1,0 +1,712 @@
+{
+  "sdk_version": "0.47.0",
+  "scope": "Public methods declared on selected core and helper classes, not every export, inherited method or optional provider. Static references are not runtime coverage.",
+  "features": [
+    {
+      "surface": "Agent.on_call_received",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.default_on_call_received",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_call_start",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\audio\\capture_review_samples.py",
+        "tests\\audio\\public_probe.py",
+        "tests\\integration\\hosted_smoke.py",
+        "tests\\integration\\persona_roleplay.py",
+        "tests\\integration\\sensitive_field_probe.py",
+        "tests\\integration\\vitals_probe.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_caller_speech",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\audio\\capture_review_samples.py",
+        "tests\\audio\\early_speech_probe.py",
+        "tests\\audio\\native_asr.py",
+        "tests\\audio\\public_probe.py",
+        "tests\\audio\\robustness_probe.py",
+        "tests\\audio\\run_fixture_backlog.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_agent_speech",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\audio\\capture_review_samples.py",
+        "tests\\audio\\early_speech_probe.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_task_complete",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\integration\\hosted_smoke.py",
+        "tests\\integration\\sensitive_field_probe.py",
+        "tests\\integration\\vitals_probe.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_question",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_action_request",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_session_end",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_outbound_failed",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_search_query",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_reach_person",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_validate",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_action",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py",
+        "tests\\sdk\\test_offline_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_escalate",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_caller_dtmf",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_dtmf",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_agent_dtmf",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_press_enter",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_wakeword",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.on_wake",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.listen_phone",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.listen_webrtc",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.listen_sip",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.call_local",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.test_audio",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\audio\\capture_review_samples.py",
+        "tests\\audio\\early_speech_probe.py",
+        "tests\\audio\\native_asr.py",
+        "tests\\audio\\native_capture.py",
+        "tests\\audio\\public_probe.py",
+        "tests\\audio\\robustness_probe.py",
+        "tests\\audio\\run_fixture_backlog.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.listen_for_wake",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.call_phone",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.attach_campaign",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.test_roleplay",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.roleplay",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\integration\\adaptive_harness.py",
+        "tests\\integration\\persona_roleplay.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.chat",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.patch",
+      "source": "agent.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\integration\\persona_roleplay.py",
+        "tests\\sdk\\test_offline_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Agent.test",
+      "source": "agent.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\integration\\defect_discovery.py",
+        "tests\\integration\\easy_credentials_hosted.py",
+        "tests\\integration\\harborcare_hosted.py",
+        "tests\\integration\\hosted_smoke.py",
+        "tests\\integration\\lab_challenges.py",
+        "tests\\integration\\run_compliance.py",
+        "tests\\integration\\run_text_backlog.py",
+        "tests\\integration\\security_hosted.py",
+        "tests\\integration\\sensitive_field_probe.py",
+        "tests\\integration\\trace_appointments.py",
+        "tests\\integration\\vitals_probe.py",
+        "tests\\metrics\\expert_routing.py",
+        "tests\\metrics\\run_expert_routing.py",
+        "tests\\metrics\\turn_latency.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.id",
+      "source": "call.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\functional\\test_identity_routing.py",
+        "tests\\functional\\test_lab_regressions.py",
+        "tests\\functional\\test_security_handlers.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.call_info",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_directional_contracts.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.set_variable",
+      "source": "call.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\sdk\\test_directional_contracts.py",
+        "tests\\sdk\\test_offline_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.get_variable",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_directional_contracts.py",
+        "tests\\sdk\\test_extended_contracts.py",
+        "tests\\sdk\\test_offline_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.set_language_mode",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.set_agent_dtmf",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.send_dtmf",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.set_persona",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\integration\\persona_roleplay.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.set_voicemail_action",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.send_command",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.get_field",
+      "source": "call.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\integration\\hosted_smoke.py",
+        "tests\\integration\\sensitive_field_probe.py",
+        "tests\\integration\\vitals_probe.py",
+        "tests\\sdk\\test_extended_contracts.py",
+        "tests\\sdk\\test_offline_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.has_field",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.transfer",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.immediate_transfer",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.set_task",
+      "source": "call.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\audio\\public_probe.py",
+        "tests\\integration\\hosted_smoke.py",
+        "tests\\integration\\sensitive_field_probe.py",
+        "tests\\integration\\vitals_probe.py",
+        "tests\\sdk\\test_directional_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.retry_task",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.read_script",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\audio\\capture_review_samples.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.add_info",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.send_instruction",
+      "source": "call.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.hangup",
+      "source": "call.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\integration\\hosted_smoke.py",
+        "tests\\integration\\sensitive_field_probe.py",
+        "tests\\integration\\vitals_probe.py",
+        "tests\\sdk\\test_extended_contracts.py",
+        "tests\\sdk\\test_offline_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Call.reach_person",
+      "source": "call.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_directional_contracts.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.get_http_url",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.get_websocket_url",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.create_webrtc_agent",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.create_sip_agent",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.get_campaign",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.list_campaigns",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.create_outbound",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.listen_inbound",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.serve_campaign",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.list_numbers",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.send_sms",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "Client.next_sms",
+      "source": "client.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "IntentRecognizer.classify",
+      "source": "helpers/llm.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\functional\\test_identity_routing.py",
+        "tests\\functional\\test_lab_regressions.py",
+        "tests\\integration\\trace_appointments.py",
+        "tests\\metrics\\intent_accuracy.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "DatetimeFilter.filter",
+      "source": "helpers/llm.py",
+      "agent_reference": true,
+      "test_references": [
+        "tests\\functional\\test_lab_regressions.py",
+        "tests\\integration\\extended_helpers.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "DateRangeParser.parse",
+      "source": "helpers/llm.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "DocumentQA.upsert_document",
+      "source": "helpers/rag.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "DocumentQA.add_document",
+      "source": "helpers/rag.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "DocumentQA.delete_document",
+      "source": "helpers/rag.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "DocumentQA.clear",
+      "source": "helpers/rag.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "DocumentQA.ask",
+      "source": "helpers/rag.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\integration\\extended_helpers.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "ServerRAG.reconcile",
+      "source": "helpers/server_rag.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "ServerRAG.upsert_document",
+      "source": "helpers/server_rag.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "ServerRAG.add_document",
+      "source": "helpers/server_rag.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "ServerRAG.delete_document",
+      "source": "helpers/server_rag.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "ServerRAG.clear",
+      "source": "helpers/server_rag.py",
+      "agent_reference": false,
+      "test_references": [],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    },
+    {
+      "surface": "ServerRAG.ask",
+      "source": "helpers/server_rag.py",
+      "agent_reference": false,
+      "test_references": [
+        "tests\\integration\\extended_helpers.py",
+        "tests\\sdk\\test_extended_contracts.py"
+      ],
+      "execution_status": "NOT_INDIVIDUALLY_ATTESTED"
+    }
+  ]
+}
