@@ -4,9 +4,11 @@ from pathlib import Path
 import json,subprocess
 from urllib.parse import urlsplit,parse_qs
 from refresh_calls import refresh_calls
+from voice_session import VoiceSession
 root=Path(__file__).resolve().parents[1]
 lock=Lock()
 active_run=None
+voice=VoiceSession(root)
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(root),**kwargs)
     def end_headers(self):
@@ -16,8 +18,15 @@ class Handler(SimpleHTTPRequestHandler):
         global active_run
         allowed_hosts=("127.0.0.1:8765","localhost:8765")
         origin=self.headers.get("Origin")
-        if self.path!="/api/tests/start" or self.headers.get("Host") not in allowed_hosts or origin not in (None,"http://127.0.0.1:8765","http://localhost:8765"):
+        if self.path not in ("/api/tests/start","/api/agent/start") or self.headers.get("Host") not in allowed_hosts or origin not in (None,"http://127.0.0.1:8765","http://localhost:8765"):
             self.send_error(403);return
+        if self.path=="/api/agent/start":
+            try:
+                with lock:data=voice.start()
+                body=json.dumps(data).encode();self.send_response(202)
+            except (OSError,subprocess.TimeoutExpired):
+                body=json.dumps({'status':'error','message':'Could not start listener; inspect local evidence/managed-webrtc.log.'}).encode();self.send_response(503)
+            self.send_header("Content-Type","application/json");self.end_headers();self.wfile.write(body);return
         try:
             length=int(self.headers.get("Content-Length","0"))
             if length<1 or length>1024: raise ValueError()
@@ -38,6 +47,9 @@ class Handler(SimpleHTTPRequestHandler):
         except (ValueError,json.JSONDecodeError):
             self.send_error(400,"Invalid fixed suite request")
     def do_GET(self):
+        if self.path=="/api/agent/status":
+            with lock:data=voice.status()
+            body=json.dumps(data).encode();self.send_response(200);self.send_header("Content-Type","application/json");self.end_headers();self.wfile.write(body);return
         if self.path=="/api/calls/refresh":
             try:
                 with lock:data=refresh_calls()

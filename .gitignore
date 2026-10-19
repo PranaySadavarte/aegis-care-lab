@@ -15,3 +15,5 @@ baseline/sdk-0.47.0/installed-inventory.json
 
 # Ephemeral local voice session access link
 dashboard/agent-session.json
+
+dashboard/agent-session.tmp
