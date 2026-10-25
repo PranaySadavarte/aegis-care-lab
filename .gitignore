@@ -17,3 +17,9 @@ baseline/sdk-0.47.0/installed-inventory.json
 dashboard/agent-session.json
 
 dashboard/agent-session.tmp
+
+# Local fixture-generation scratch files
+work/
+
+# Local deliverable copies and verification screenshots
+outputs/

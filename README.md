@@ -2,6 +2,14 @@
 
 AEGIS Care evaluates **Guava CLI/SDK 0.47.0** through an intentionally scrutinized **HarborCare** synthetic healthcare agent. The project contains layered tests, a local evidence dashboard, manual scripts and an evidence-backed leadership assessment. It is not a production healthcare/payment service.
 
+## October 25: prerecorded accent testing
+
+Added David + US neural control + British, Indian, Australian and Nigerian English synthetic prerecorded clips. [Results, listening and methodology](reports/test-results/accent-comparison-2026-10-25.md). Native file-audio comparison ran once per voice. David/US/UK/AU: 0% numeral-normalized WER; India: 16%; Nigeria: 24% on this single script. This is not a human-accent benchmark.
+
+Open `http://127.0.0.1:8766/dashboard/accent-comparison.html` for the current new-workspace dashboard. Start it with `baseline/sdk-0.47.0/.venv/Scripts/python.exe dashboard/serve.py --port 8766`. The default port remains 8765.
+
+Rerun with `baseline/sdk-0.47.0/.venv/Scripts/python.exe scripts/run_accent_comparison.py` (hosted usage), then run `scripts/build_accent_report.py` with that interpreter. See the report for fixture-generator setup and exact voice IDs. Fresh application regression: 56/56 PASS, including five new scorer checks. Historical SDK assertions were not rerun for this audio addition.
+
 ## October 18 improvement lab
 
 [All 22 findings and fix walkthrough](reports/test-results/fix-walkthrough-2026-10-18.md). WebRTC codes expire after one hour: use **Start / renew voice session** in the lab when needed; live readiness and expiry are checked before a Talk link is shown.

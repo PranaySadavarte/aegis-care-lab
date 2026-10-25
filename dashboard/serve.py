@@ -16,9 +16,10 @@ class Handler(SimpleHTTPRequestHandler):
         super().end_headers()
     def do_POST(self):
         global active_run
-        allowed_hosts=("127.0.0.1:8765","localhost:8765")
+        port=self.server.server_port
+        allowed_hosts=(f"127.0.0.1:{port}",f"localhost:{port}")
         origin=self.headers.get("Origin")
-        if self.path not in ("/api/tests/start","/api/agent/start") or self.headers.get("Host") not in allowed_hosts or origin not in (None,"http://127.0.0.1:8765","http://localhost:8765"):
+        if self.path not in ("/api/tests/start","/api/agent/start") or self.headers.get("Host") not in allowed_hosts or origin not in (None,f"http://127.0.0.1:{port}",f"http://localhost:{port}"):
             self.send_error(403);return
         if self.path=="/api/agent/start":
             try:
@@ -91,5 +92,7 @@ class LocalDashboardServer(ThreadingHTTPServer):
     allow_reuse_address=False
 
 if __name__=="__main__":
-    print("Dashboard on http://127.0.0.1:8765/dashboard/",flush=True)
-    LocalDashboardServer(("127.0.0.1",8765),Handler).serve_forever()
+    import argparse
+    parser=argparse.ArgumentParser();parser.add_argument('--port',type=int,default=8765);args=parser.parse_args()
+    print(f"Dashboard on http://127.0.0.1:{args.port}/dashboard/",flush=True)
+    LocalDashboardServer(("127.0.0.1",args.port),Handler).serve_forever()
